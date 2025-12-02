@@ -1,0 +1,34 @@
+{
+  "accounts": [
+    {
+      "label": "account-1",
+      "token": "your-api-token-1"
+    },
+    {
+      "label": "account-2",
+      "token": "your-api-token-2"
+    }
+  ],
+  "recipients": [
+    {
+      "url": "https://www.leboncoin.fr/reply/3104783621",
+      "variables": {
+        "name": "Jean",
+        "itemTitle": "Vélo de course"
+      }
+    },
+    {
+      "url": "https://www.leboncoin.fr/reply/3104783622",
+      "variables": {
+        "name": "Marie",
+        "itemTitle": "Canapé convertible"
+      }
+    }
+  ],
+  "messageTemplate": "Bonjour {name}, je suis intéressé par votre annonce \"{itemTitle}\". Merci de me dire si elle est toujours disponible.",
+  "idempotencyFile": ".send_messages_state.json",
+  "logFile": "logs.jsonl",
+  "apiBaseUrl": "https://api.leboncoin.fr/messaging",
+  "minDelaySeconds": 180,
+  "maxDelaySeconds": 300
+}
